@@ -1,0 +1,198 @@
+:root {
+    /* Color Variables */
+    --bg-main: rgb(255, 255, 255);
+    --primary-aqua: #00ffff; 
+    --primary-purple: #9c27b0;
+    --hover-red: rgb(172, 3, 3);
+    --img-border: rgb(139, 74, 119);
+    --table-shadow: royalblue;
+    --th-bg: pink;
+    --th-text: blue;
+    --td-text: blueviolet;
+    --row-hover-bg: rgb(24, 1, 1);
+    --button-text: white;
+    --button-hover-bg: #7b1fa2;
+    --page:black; 
+}
+
+body {
+    font-family: "Farro";
+    margin: 0; 
+    padding: 0;
+    background-color: var(--bg-main);
+    display: flex;
+    flex-direction: column;      /*بيرص  row*/
+    min-height: 100vh; 
+}
+ 
+/*################headddder icons part*/
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: var(--primary-aqua); 
+    padding: 15px 30px;
+    position: relative; 
+}
+
+.main-header h1 {
+    margin: 0;
+    font-family: 'Jua';
+    color: var(--primary-purple);
+    font-size: 24px;
+    text-shadow: 2px 0 0 var(--primary-purple);
+    text-align: left;
+}
+
+.header-icons {
+    display: flex;   
+    gap: 230%;
+    position: absolute;
+    left: 50%;
+    transform: translateX(30%);
+}
+
+.header-icons a {
+    color: var(--primary-purple); 
+    font-size: 24px;
+    transition: color 0.3s ease;   
+}
+
+.header-icons a:hover {
+    color: var(--hover-red);
+}
+
+/*################main*/
+main {
+    flex: 1; 
+    padding: 20px; 
+}
+
+/*#######################image postion*/
+.faridda {
+    display: flex;
+    justify-content: center;
+    gap: 20px; 
+    padding: 20px 0;
+}
+
+.faridda img {
+    width: 30%;
+    height: 30%;
+    border: 3px solid var(--img-border);
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+}
+
+/*###########################################table*/ 
+table {
+    width: 100%;
+    border-collapse: separate;
+    background-color: var(--primary-aqua);
+    box-shadow: 0 5px 9px var(--table-shadow);
+}
+
+th {
+    background-color: var(--th-bg);
+    color: var(--th-text);
+    text-align: left;
+    padding: 15px; 
+    font-size: 20px;
+}
+
+td {
+    padding: 15px; 
+    color: var(--td-text);
+    font-size: 15px;
+}
+
+tr:nth-child(even) {
+    background-color: var(--bg-main);
+}
+
+tr:hover {
+    background-color: var(--row-hover-bg);
+}
+
+/*####################buttom*/
+.button2 {
+    background-color: var(--primary-purple);
+    color: var(--button-text);
+    padding: 12px 30px; 
+    font-size: 18px;
+    border-radius: 30px; 
+    cursor: pointer; 
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
+}
+
+.button2:hover {
+    background-color: var(--button-hover-bg); 
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
+    transform: translateY(-3px); 
+}
+/*#######################page number*/
+.page-numbers {
+    display: flex;
+    justify-content: flex-end;  /* Aligns to the right */
+    gap: 10px;
+    padding: 10px 30px 0;
+}
+
+/* Styles all the links (arrows and numbers) */
+.page-numbers a {
+    color: var(--primary-purple, #9c27b0);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect: changes background when mouse is over it */
+.page-numbers a:hover {
+    background: #1d4ed8;
+    color: #fff;
+}
+
+/* The active page stays bold and highlighted */
+.page-numbers a.active {
+    font-weight: bold;
+    background: #0f172a;
+    color: #fff;
+}
+ 
+/* 4. Footer styling fixed */
+footer {
+    background-color: var(--primary-aqua);
+    color: var(--row-hover-bg); /* Using aliceblue variable */
+    padding: 15px 30px;
+    display: flex;
+    justify-content: space-between; 
+    align-items: center;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+
+.page-link:hover {
+    background-color: var(--primary-purple);
+    color: var(--button-text);
+}
+
+/* 5. Responsive Design */
+@media screen and (min-width: 768px) {
+    header {
+        font-size: 40px; 
+    }
+    
+    th, td {
+        font-size: 24px;
+        padding: 20px;
+    }
+    
+    footer {
+        justify-content: center; 
+        font-size: 18px;
+    }
+}

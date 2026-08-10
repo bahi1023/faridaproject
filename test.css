@@ -1,0 +1,135 @@
+/* 1. Variables for easy color changes */
+:root {
+    --bg-color: #f4f4f9;
+    --primary-color: #6200ea;
+    --secondary-color: #00e676;
+    --text-dark: #333333;
+    --text-light: #ffffff;
+}
+
+/* 2. Basic Reset to remove default margins */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* 3. Body styling (Flexbox to push footer to bottom) */
+body {
+    background-color: var(--bg-color);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* 4. Header Styling */
+.top-header {
+    background-color: var(--primary-color);
+    color: var(--text-light);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 40px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.nav-links a {
+    color: var(--text-light);
+    text-decoration: none;
+    margin-left: 20px;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--secondary-color);
+}
+
+/* 5. Main Content Styling */
+.content-area {
+    flex: 1; /* Pushes the footer down */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 40px;
+}
+
+/* 6. Card Styling */
+.card {
+    background-color: white;
+    padding: 40px;
+    border-radius: 12px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 500px;
+}
+
+.card h2 {
+    color: var(--primary-color);
+    margin-bottom: 15px;
+    font-size: 32px;
+}
+
+.card p {
+    line-height: 1.6;
+    margin-bottom: 25px;
+    color: #666;
+}
+
+/* 7. Button Styling */
+.action-btn {
+    display: inline-block;
+    background-color: var(--secondary-color);
+    color: var(--text-dark);
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.action-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 12px rgba(0, 230, 118, 0.4);
+}
+.page-numbers {
+    display: flex;
+    justify-content: flex-end;  /* Aligns to the right */
+    gap: 10px;
+    padding: 10px 30px 0;
+}
+
+/* Styles all the links (arrows and numbers) */
+.page-numbers a {
+    color: var(--primary-purple, #9c27b0);
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 16px;
+    border-radius: 8px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Hover effect: changes background when mouse is over it */
+.page-numbers a:hover {
+    background: #1d4ed8;
+    color: #fff;
+}
+
+/* The active page stays bold and highlighted */
+.page-numbers a.active {
+    font-weight: bold;
+    background: #0f172a;
+    color: #fff;
+}
+
+/* 8. Footer Styling */
+.bottom-footer {
+    background-color: #222;
+    color: var(--text-light);
+    text-align: center;
+    padding: 15px;
+    font-size: 14px;
+}
