@@ -45,9 +45,9 @@ body {
 }
 
 .header-icons {
-    display: flex;   
-    gap: 15px; /* Fixed: normal gap */
-    /* Fixed: removed absolute positioning so it fits on mobile */
+   display: flex;   
+    align-items: center;
+    gap: 150px;
 }
 
 .header-icons a {
@@ -70,15 +70,13 @@ main {
 .faridda {
     display: flex;
     justify-content: center;
-    flex-wrap: wrap; /* Fixed: allows images to stack on small screens */
     gap: 20px; 
     padding: 20px 0;
 }
 
 .faridda img {
-    width: 300px; /* Fixed: standard size */
-    max-width: 100%; /* Fixed: shrinks to fit mobile screens */
-    height: auto; /* Fixed: stops images from stretching/squishing */
+    width: 30%;
+    height: 30%;
     border: 3px solid var(--img-border);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
@@ -130,7 +128,6 @@ tr:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
     transform: translateY(-3px); 
 }
-
 /*#######################page number*/
 .page-numbers {
     display: flex;
@@ -174,19 +171,86 @@ footer {
     font-weight: bold;
 }
 
+
+
 .page-link:hover {
     background-color: var(--primary-purple);
     color: var(--button-text);
 }
 
-/* 5. Responsive Design */
-@media screen and (min-width: 768px) {
-    header {
+/* -------- MOBILE PHONES (Screens smaller than 768px) -------- */
+@media screen and (max-width: 768px) {
+    .main-header {
+        padding: 10px 15px; 
+    }
+    
+    .main-header h1 {
+        font-size: 20px; 
+    }
+    
+    .header-icons {
+        display: flex;
+        align-items: center;
+        margin-left: auto;
+        gap: 15px;        
+        position: static; 
+        transform: none;  
+    }
+    
+    .header-icons a {
+        font-size: 20px; 
+    }
+    
+    .faridda img {
+        width: 100%; /* Forces images to fit the screen */
+        max-width: 300px;
+    }
+
+    th, td {
+        font-size: 14px; /* Shrinks table text so it doesn't break the page */
+        padding: 10px;
+    }
+
+    .button2 {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
+    
+    footer {
+        flex-direction: column; /* Stacks footer items neatly on top of each other */
+        gap: 10px;
+        font-size: 14px;
+        text-align: center;
+    }
+}
+
+/* -------- TABLETS & DESKTOPS (Screens 768px and larger) -------- */
+@media screen and (min-width: 769px) {
+    .main-header {
+        padding: 20px 40px;
+    }
+
+    .main-header h1 {
         font-size: 40px; 
     }
     
-    th, td {
+    .header-icons {
+        display: flex;   
+        gap: 150px; /* <-- Makes them super wide on the laptop! */
+        margin-right: 30px; 
+    }
+
+    .header-icons a {
+        font-size: 28px; 
+    }
+
+    th {
         font-size: 24px;
+        padding: 20px;
+    }
+
+    td {
+        font-size: 20px;
         padding: 20px;
     }
     
