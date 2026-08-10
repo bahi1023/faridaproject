@@ -12,47 +12,48 @@
     --row-hover-bg: rgb(24, 1, 1);
     --button-text: white;
     --button-hover-bg: #7b1fa2;
-    --page:black; 
+    --page: black; 
 }
 
 body {
-    font-family: "Farro";
+    font-family: "Farro", sans-serif;
     margin: 0; 
     padding: 0;
     background-color: var(--bg-main);
     display: flex;
-    flex-direction: column;      /*بيرص  row*/
+    flex-direction: column;
     min-height: 100vh; 
+    overflow-x: hidden; /* Prevents the page from shifting side-to-side */
 }
- 
-/*################headddder icons part*/
+
+/* =========================================
+   DESKTOP / LAPTOP STYLES (Default)
+   ========================================= */
 .main-header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: var(--primary-aqua); 
-    padding: 15px 30px;
-    position: relative; 
+    padding: 20px 40px; 
 }
 
 .main-header h1 {
     margin: 0;
-    font-family: 'Jua';
+    font-family: 'Jua', sans-serif;
     color: var(--primary-purple);
-    font-size: 24px;
+    font-size: 40px; 
     text-shadow: 2px 0 0 var(--primary-purple);
-    text-align: left;
 }
 
 .header-icons {
-   display: flex;   
+    display: flex;   
     align-items: center;
-    gap: 150px;
+    gap: 150px; 
 }
 
 .header-icons a {
     color: var(--primary-purple); 
-    font-size: 24px;
+    font-size: 28px;
     transition: color 0.3s ease;   
 }
 
@@ -60,29 +61,31 @@ body {
     color: var(--hover-red);
 }
 
-/*################main*/
+/* main content */
 main {
     flex: 1; 
     padding: 20px; 
 }
 
-/*#######################image postion*/
+/* image position */
 .faridda {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; 
     gap: 20px; 
     padding: 20px 0;
 }
 
 .faridda img {
-    width: 30%;
-    height: 30%;
+    width: 300px;
+    max-width: 100%;
+    height: auto;
     border: 3px solid var(--img-border);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
 }
 
-/*###########################################table*/ 
+/* table */ 
 table {
     width: 100%;
     border-collapse: separate;
@@ -94,14 +97,14 @@ th {
     background-color: var(--th-bg);
     color: var(--th-text);
     text-align: left;
-    padding: 15px; 
-    font-size: 20px;
+    padding: 20px; 
+    font-size: 24px;
 }
 
 td {
-    padding: 15px; 
+    padding: 20px; 
     color: var(--td-text);
-    font-size: 15px;
+    font-size: 20px;
 }
 
 tr:nth-child(even) {
@@ -112,7 +115,7 @@ tr:hover {
     background-color: var(--row-hover-bg);
 }
 
-/*####################buttom*/
+/* button */
 .button2 {
     background-color: var(--primary-purple);
     color: var(--button-text);
@@ -128,17 +131,17 @@ tr:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
     transform: translateY(-3px); 
 }
-/*#######################page number*/
+
+/* page numbers */
 .page-numbers {
     display: flex;
-    justify-content: flex-end;  /* Aligns to the right */
+    justify-content: flex-end;
     gap: 10px;
     padding: 10px 30px 0;
 }
 
-/* Styles all the links (arrows and numbers) */
 .page-numbers a {
-    color: var(--primary-purple, #9c27b0);
+    color: var(--primary-purple);
     text-decoration: none;
     font-size: 18px;
     padding: 8px 16px;
@@ -146,116 +149,74 @@ tr:hover {
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Hover effect: changes background when mouse is over it */
 .page-numbers a:hover {
     background: #1d4ed8;
     color: #fff;
 }
 
-/* The active page stays bold and highlighted */
 .page-numbers a.active {
     font-weight: bold;
     background: #0f172a;
     color: #fff;
 }
- 
-/* 4. Footer styling fixed */
+
+/* footer */
 footer {
     background-color: var(--primary-aqua);
-    color: var(--row-hover-bg); /* Using aliceblue variable */
+    color: var(--row-hover-bg); 
     padding: 15px 30px;
     display: flex;
-    justify-content: space-between; 
+    justify-content: center; 
     align-items: center;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
 }
 
-
-
-.page-link:hover {
-    background-color: var(--primary-purple);
-    color: var(--button-text);
-}
-
-/* -------- MOBILE PHONES (Screens smaller than 768px) -------- */
+/* =========================================
+   MOBILE PHONES (Screens smaller than 768px)
+   ========================================= */
 @media screen and (max-width: 768px) {
     .main-header {
-        padding: 10px 15px; 
+        padding: 15px; 
+        flex-direction: column; 
+        gap: 15px;
     }
     
     .main-header h1 {
-        font-size: 20px; 
-    }
+        font-size: 24px; 
+        text-align: center; 
     
     .header-icons {
-        display: flex;
-        align-items: center;
-        margin-left: auto;
-        gap: 15px;        
-        position: static; 
-        transform: none;  
+        gap: 25px; 
+        width: 100%;
+        justify-content: center;
     }
     
     .header-icons a {
-        font-size: 20px; 
+        font-size: 24px; 
     }
     
+  
+    .faridda {
+        flex-direction: column;
+        align-items: center;
+    }
+
     .faridda img {
-        width: 100%; /* Forces images to fit the screen */
+        width: 100%;
         max-width: 300px;
     }
 
     th, td {
-        font-size: 14px; /* Shrinks table text so it doesn't break the page */
+        font-size: 14px; 
         padding: 10px;
     }
 
-    .button2 {
-        padding: 10px 20px;
-        font-size: 16px;
-    }
-    
     footer {
-        flex-direction: column; /* Stacks footer items neatly on top of each other */
+        flex-direction: column; 
         gap: 10px;
         font-size: 14px;
         text-align: center;
     }
 }
-
-/* -------- TABLETS & DESKTOPS (Screens 768px and larger) -------- */
-@media screen and (min-width: 769px) {
-    .main-header {
-        padding: 20px 40px;
-    }
-
-    .main-header h1 {
-        font-size: 40px; 
-    }
-    
-    .header-icons {
-        display: flex;   
-        gap: 150px; /* <-- Makes them super wide on the laptop! */
-        margin-right: 30px; 
-    }
-
-    .header-icons a {
-        font-size: 28px; 
-    }
-
-    th {
-        font-size: 24px;
-        padding: 20px;
-    }
-
-    td {
-        font-size: 20px;
-        padding: 20px;
-    }
-    
-    footer {
-        justify-content: center; 
-        font-size: 18px;
-    }
 }
