@@ -23,7 +23,7 @@ body {
     display: flex;
     flex-direction: column;
     min-height: 100vh; 
-    overflow-x: hidden; /* Prevents the page from shifting side-to-side */
+    overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
 }
 
 /* =========================================
@@ -48,7 +48,8 @@ body {
 .header-icons {
     display: flex;   
     align-items: center;
-    gap: 150px; 
+    gap: 80px; /* Wide, clean spacing between icons on laptop */
+    flex-wrap: nowrap; /* Prevents icons from dropping to a new line */
 }
 
 .header-icons a {
@@ -178,27 +179,28 @@ footer {
 @media screen and (max-width: 768px) {
     .main-header {
         padding: 15px; 
-        flex-direction: column; 
+        flex-direction: column; /* Stacks title and icons on phones */
         gap: 15px;
     }
     
     .main-header h1 {
         font-size: 24px; 
-        text-align: center; 
+        text-align: center;
+    }
     
     .header-icons {
-        gap: 25px; 
+        gap: 25px; /* Compact spacing for phone screens */
         width: 100%;
         justify-content: center;
+        flex-wrap: nowrap;
     }
     
     .header-icons a {
         font-size: 24px; 
     }
     
-  
     .faridda {
-        flex-direction: column;
+        flex-direction: column; /* Stacks images vertically on phones */
         align-items: center;
     }
 
@@ -218,5 +220,4 @@ footer {
         font-size: 14px;
         text-align: center;
     }
-}
 }
