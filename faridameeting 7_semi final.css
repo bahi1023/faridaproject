@@ -46,10 +46,8 @@ body {
 
 .header-icons {
     display: flex;   
-    gap: 230%;
-    position: absolute;
-    left: 50%;
-    transform: translateX(30%);
+    gap: 15px; /* Fixed: normal gap */
+    /* Fixed: removed absolute positioning so it fits on mobile */
 }
 
 .header-icons a {
@@ -72,13 +70,15 @@ main {
 .faridda {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap; /* Fixed: allows images to stack on small screens */
     gap: 20px; 
     padding: 20px 0;
 }
 
 .faridda img {
-    width: 30%;
-    height: 30%;
+    width: 300px; /* Fixed: standard size */
+    max-width: 100%; /* Fixed: shrinks to fit mobile screens */
+    height: auto; /* Fixed: stops images from stretching/squishing */
     border: 3px solid var(--img-border);
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.2);
@@ -130,6 +130,7 @@ tr:hover {
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); 
     transform: translateY(-3px); 
 }
+
 /*#######################page number*/
 .page-numbers {
     display: flex;
@@ -172,8 +173,6 @@ footer {
     font-size: 16px;
     font-weight: bold;
 }
-
-
 
 .page-link:hover {
     background-color: var(--primary-purple);
