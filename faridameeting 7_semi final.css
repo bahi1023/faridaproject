@@ -177,6 +177,10 @@ footer {
    MOBILE PHONES (Screens smaller than 768px)
    ========================================= */
 @media screen and (max-width: 768px) {
+    body {
+        min-height: 0; /* removes the full-screen stretch that caused the gap */
+    }
+
     .main-header {
         padding: 15px; 
         flex-direction: column; /* Stacks title and icons on phones */
