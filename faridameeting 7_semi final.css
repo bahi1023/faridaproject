@@ -22,8 +22,7 @@ body {
     background-color: var(--bg-main);
     display: flex;
     flex-direction: column;
-    min-height: 100vh; 
-    overflow-x: hidden; /* Prevents unwanted horizontal scrolling */
+    overflow-x: hidden;
 }
 
 /* =========================================
@@ -64,6 +63,7 @@ body {
 
 /* main content */
 main {
+    flex: 1;
     padding: 20px; 
 }
 
@@ -177,11 +177,6 @@ footer {
    MOBILE PHONES (Screens smaller than 768px)
    ========================================= */
 @media screen and (max-width: 768px) {
-    body {
-        display: block !important;
-        min-height: auto !important;
-    }
-
     .main-header {
         padding: 15px; 
         flex-direction: column; /* Stacks title and icons on phones */
