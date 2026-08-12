@@ -64,7 +64,6 @@ body {
 
 /* main content */
 main {
-    flex: 1; 
     padding: 20px; 
 }
 
@@ -171,6 +170,7 @@ footer {
     align-items: center;
     font-size: 18px;
     font-weight: bold;
+    margin-top: auto;
 }
 
 /* =========================================
@@ -207,14 +207,6 @@ footer {
     .faridda img {
         width: 100%;
         max-width: 300px;
-    }
-
-    body {
-        display: block;
-    }
-
-    main {
-        padding-bottom: 0;
     }
 
     th, td {
