@@ -178,7 +178,8 @@ footer {
    ========================================= */
 @media screen and (max-width: 768px) {
     body {
-        min-height: 0; /* removes the full-screen stretch that caused the gap */
+        display: block !important;
+        min-height: auto !important;
     }
 
     .main-header {
