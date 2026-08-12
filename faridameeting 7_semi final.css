@@ -1,4 +1,4 @@
-:root {
+ :root {
     /* Color Variables */
     --bg-main: rgb(255, 255, 255);
     --primary-aqua: #00ffff; 
@@ -212,6 +212,11 @@ footer {
     th, td {
         font-size: 14px; 
         padding: 10px;
+    }
+
+    .page-numbers {
+        justify-content: center;
+        padding: 10px 0;
     }
 
     footer {
