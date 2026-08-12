@@ -1,4 +1,4 @@
- :root {
+:root {
     /* Color Variables */
     --bg-main: rgb(255, 255, 255);
     --primary-aqua: #00ffff; 
@@ -134,8 +134,8 @@ tr:hover {
 }
 
 /* page numbers */
-.page-numbers {
-    display: flex;
+div.page-numbers {
+    display: flex !important;
     justify-content: flex-end;
     gap: 10px;
     padding: 10px 30px 0;
@@ -214,9 +214,9 @@ footer {
         padding: 10px;
     }
 
-    .page-numbers {
-        justify-content: center;
-        padding: 10px 0;
+    div.page-numbers {
+        justify-content: center !important;
+        padding: 10px 0 !important;
     }
 
     footer {
