@@ -210,12 +210,11 @@ footer {
     }
 
     body {
-        min-height: unset;
+        display: block;
     }
 
     main {
-        flex: 0 !important;
-        padding-bottom: 5px;
+        padding-bottom: 0;
     }
 
     th, td {
