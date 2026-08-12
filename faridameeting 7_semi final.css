@@ -64,7 +64,6 @@ body {
 
 /* main content */
 main {
-    flex: 1;
     padding: 20px; 
 }
 
@@ -139,6 +138,7 @@ tr:hover {
     justify-content: flex-end;
     gap: 10px;
     padding: 10px 30px;
+    margin-top: auto;
 }
 
 .page-numbers a {
