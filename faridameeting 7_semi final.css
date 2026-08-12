@@ -209,8 +209,13 @@ footer {
         max-width: 300px;
     }
 
+    body {
+        min-height: unset;
+    }
+
     main {
-        flex: none;
+        flex: 0 !important;
+        padding-bottom: 5px;
     }
 
     th, td {
