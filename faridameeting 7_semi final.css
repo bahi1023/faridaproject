@@ -134,11 +134,11 @@ tr:hover {
 }
 
 /* page numbers */
-div.page-numbers {
-    display: flex !important;
-    justify-content: flex-end;
+.page-numbers {
+    display: flex;
+    justify-content: center;
     gap: 10px;
-    padding: 10px 30px 0;
+    padding: 10px 30px;
 }
 
 .page-numbers a {
@@ -209,14 +209,13 @@ footer {
         max-width: 300px;
     }
 
+    main {
+        flex: none;
+    }
+
     th, td {
         font-size: 14px; 
         padding: 10px;
-    }
-
-    div.page-numbers {
-        justify-content: center !important;
-        padding: 10px 0 !important;
     }
 
     footer {
